@@ -14,10 +14,10 @@ defmodule TestEnvironment do
   end
 end
 
-config :elixir_boilerplate, ElixirBoilerplate.Repo,
+config :mirego_elixir_boilerplate, MiregoElixirBoilerplate.Repo,
   pool: Ecto.Adapters.SQL.Sandbox,
   url: TestEnvironment.get_database_url()
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint, server: false
+config :mirego_elixir_boilerplate, MiregoElixirBoilerplateWeb.Endpoint, server: false
 
 config :logger, level: :warn

@@ -1,9 +1,9 @@
-defmodule ElixirBoilerplate.Mixfile do
+defmodule MiregoElixirBoilerplate.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :elixir_boilerplate,
+      app: :mirego_elixir_boilerplate,
       version: "0.0.1",
       elixir: "~> 1.12",
       erlang: "~> 24.1",
@@ -22,7 +22,7 @@ defmodule ElixirBoilerplate.Mixfile do
 
   def application do
     [
-      mod: {ElixirBoilerplate.Application, []},
+      mod: {MiregoElixirBoilerplate.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -98,9 +98,9 @@ defmodule ElixirBoilerplate.Mixfile do
 
   defp releases do
     [
-      elixir_boilerplate: [
-        version: {:from_app, :elixir_boilerplate},
-        applications: [elixir_boilerplate: :permanent],
+      mirego_elixir_boilerplate: [
+        version: {:from_app, :mirego_elixir_boilerplate},
+        applications: [mirego_elixir_boilerplate: :permanent],
         include_executables_for: [:unix],
         steps: [:assemble, :tar]
       ]
